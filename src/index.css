@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  /* custom colors */
+  --bg-dark: #0a0a0a;
+  --bg-card: #111111;
+  --border-dark: #1f1f1f;
+  --text-muted: #9ca3af;
+}
+
+@variant dark (&:is(.dark *));
+
+@layer base {
+  body {
+    @apply font-sans antialiased transition-all duration-300;
+
+    /* Light mode */
+    @apply bg-gray-50 text-gray-900;
+
+    /* Dark mode (premium) */
+    @apply dark:bg-[var(--bg-dark)] dark:text-white;
+
+    /* subtle gradient overlay */
+    background-image: radial-gradient(circle at top, rgba(99,102,241,0.08), transparent 40%);
+  }
+
+  /* Scrollbar (modern look) */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a;
+  }
+}

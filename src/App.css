@@ -1,0 +1,144 @@
+
+/* BADGE (clean + modern) */
+.badge {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid transparent;
+  margin-bottom: 16px;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.badge:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-1px);
+}
+
+
+/* HERO (optional - cleaner center look) */
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.hero-base {
+  width: 120px;
+  margin: auto;
+}
+
+.hero-layer {
+  display: none; /* ❌ remove old floating layers (look outdated) */
+}
+
+
+/* CENTER BOX */
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+
+/* SECTIONS (modern card feel) */
+.section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.section {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow, 0 4px 20px rgba(0,0,0,0.05));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.section-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+
+/* REMOVE OLD BORDER SPLIT */
+.section-left {
+  border: none;
+}
+
+
+/* LINKS (clean pills) */
+.link-list {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  background: var(--social-bg, #f3f4f6);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-h);
+  transition: all 0.2s ease;
+}
+
+.link-item:hover {
+  transform: translateY(-2px);
+  background: #e5e7eb;
+}
+
+.link-icon {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* SPACING FIX */
+.spacer {
+  height: 40px;
+}
+
+
+/* REMOVE OLD LINE DECOR (outdated look) */
+.line-decor {
+  display: none;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .section-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .center-box {
+    gap: 12px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+
+  .link-list {
+    justify-content: center;
+  }
+}
